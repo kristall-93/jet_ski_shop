@@ -1,10 +1,116 @@
-html{
-    box-sizing: border-box;
+@import "_vars";
+@import "_global";
+@import "_fonts";
+
+// start header
+
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 122px;
+    font-family: "SFProDisplay-Bold", sans-serif;
+    font-weight: 700;
 }
 
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
+.menu__item {
+    display: inline-block;
+    & + & {
+        padding-left: 50px;
+    }
 }
 
+.header__box {
+    display: flex;
+}
+
+.header__adress {
+    margin-right: 60px;
+    width: 265px;
+    padding-left: 30px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/adress-icon.svg);
+        width: 30px;
+        height: 30px;
+        left: 0;
+        top: -10px;
+    }
+}
+
+.user-list {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.user-list__item {
+    padding-right: 10px;
+}
+
+.basket {
+    position: relative;
+}
+
+.basket__num {
+    position: absolute;
+    font-family: "SFProDisplay-Madium", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    font-size: 10px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #1c62cd;
+    border-radius: 50%;
+    text-align: center;
+    bottom: -15px;
+    right: -14px;
+}
+
+.header__bottom{
+    margin-bottom: 79px;
+}
+
+.menu-categories {
+    background-color: #f0f0f4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 53px;
+}
+
+.menu-categories__link {
+    padding: 15px 0px 14px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 3px;
+        right: 0;
+        left: auto;
+        bottom: -2px;
+        background-color: #1c62cd;
+        transition: all 0.3s;
+    }
+    &:hover::before {
+        width: 100%;
+        left: 0;
+        right: auto;
+    }
+    &:hover{
+        color: #000;
+    }
+}
+
+// end header
+
+
+
+
+
+
+@import "_media";
