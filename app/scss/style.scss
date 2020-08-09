@@ -1247,5 +1247,18 @@
 }
 
 // end aside-filter
+// end catalog page
+
+// start product-page
+
+.product-card__inner {
+    display: flex;
+    justify-content: space-between;
+
+}
+.product-card__img-box{
+
+}
+
 
 @import "_media";
