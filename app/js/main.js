@@ -33,6 +33,39 @@ $(function () {
         slidesToScroll: 1,
         prevArrow: '<button class="product-slider__slider-btn product-slider__slider-btnprev"><img src="images/arrow-black-left.svg" alt=""></button>',
         nextArrow: '<button class="product-slider__slider-btn product-slider__slider-btnnext"><img src="images/arrow-black-right.svg" alt=""></button>',
+        responsive: [
+            {
+                breakpoint: 1301,
+                settings: {
+                    arrows: false,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 1201,
+                settings: {
+                    slidesToShow: 3,
+                    arrows: false,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 870,
+                settings: {
+                    slidesToShow: 2,
+                    arrows: false,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 590,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: false,
+                    dots: true
+                }
+            }
+        ]
     });
 
     $('.filter-style').styler();
@@ -69,6 +102,11 @@ $(function () {
 
     $('.menu__btn').on('click', function () {
         $('.menu-mobile__list').toggleClass('menu-mobile__list--active');
+    });
+
+    $('.footer__topdrop').on('click', function(){
+        $(this).next().slideToggle();
+        $(this).toggleClass('footer__topdrop--active');
     });
 
 

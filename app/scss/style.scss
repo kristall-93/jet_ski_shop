@@ -639,6 +639,18 @@
     }
 }
 
+.product-slider {
+    .slick-dots {
+        bottom: -30px;
+        button{
+            background: #C4C4C4;
+        }
+        .slick-active button{
+            background: $blue;
+        }
+    }
+}
+
 .product-slider__slider-btnprev {
     left: -40px;
 }
