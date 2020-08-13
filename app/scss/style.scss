@@ -908,6 +908,10 @@
 // end pagination
 // start aside-filter
 
+.aside__btn{
+    display: none;
+}
+
 .aside-filter__tabs {
     display: flex;
     justify-content: space-between;
