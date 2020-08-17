@@ -99,7 +99,8 @@ $(function () {
     $(".rate-yo").rateYo({
         ratedFill: "#1C62CD",
         spacing: "7px",
-        normalFill: "#c4c4c4"
+        normalFill: "#c4c4c4",
+        readOnly: true
     });
 
     $('.menu__btn').on('click', function () {
