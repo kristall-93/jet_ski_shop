@@ -62,15 +62,6 @@
         outline: none;
         padding: 0;
     }
-    .menu__btn-line {
-        height: 3px;
-        border-radius: 3px;
-        background: $text;
-        width: 34px;
-        & + & {
-            margin-top: 9px;
-        }
-    }
     .menu__mobile-linewrapper {
         display: block;
         font-weight: bold;
@@ -139,21 +130,25 @@
     }
     .product-card__img {
         width: 100%;
-    }
-    .card__top-line {
-        flex-wrap: wrap;
-        label {
-            display: block;
-            width: 100%;
-            margin-bottom: 25px;
-            margin-left: 50px;
-        }
-    }
+    }    
     .card__list-addess {
         margin-right: 50px;
     }
     .card__list-workhours {
         margin-right: 50px;
+    }
+    .card__top-line {
+        flex-wrap: wrap;
+        label {
+            width: 100%;
+            margin-bottom: 25px;
+        } 
+        form{
+            margin-left: 50px;
+        }
+    }
+    .card__input-pickup{
+        margin-left: 50px;
     }
 }
 
@@ -267,15 +262,8 @@
         flex-wrap: wrap;
     }
     .aside__btn {
-        display: block;
-        text-transform: uppercase;
-        font-weight: 700;
-        text-align: center;
-        padding: 15px 0;
-        width: 100%;
-        color: #fff;
-        background-color: $blue;
-        margin-bottom: 30px;
+        display: block;  
+            
     }
     .aside-filter {
         display: none;
@@ -337,6 +325,14 @@
     .footer__topdrop {
         pointer-events: auto;
     }
+    .card__top-line {
+        form{
+            margin-left: 20px;
+        }
+    }
+    .card__input-pickup{
+        margin-left: 20px;
+    }
 }
 
 @media (max-width: 440px) {
@@ -351,12 +347,11 @@
     }
 }
 
-//
-
 @media (min-width: 641px) {
     .aside-filter {
         display: block;
     }
+
 }
 
 @media (min-width: 941px) {
