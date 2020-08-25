@@ -17,6 +17,7 @@ gulp.task('sass', function(){
       .pipe(gulp.dest('app/css'))
       .pipe(browserSync.reload({stream: true}))
 });  
+
 gulp.task('style', function(){
     return gulp.src([
         'node_modules/normalize.css/normalize.css',
@@ -60,10 +61,12 @@ gulp.task('browser-sync', function() {
         }
     });
 });
+
 gulp.task('watch', function(){
     gulp.watch('app/scss/**/*.scss', gulp.parallel('sass'));
     gulp.watch('app/*.html', gulp.parallel('html'));
     gulp.watch('app/js/*.js', gulp.parallel('js'));
 
 });
+
 gulp.task('default', gulp.parallel('style', 'script', 'sass', 'watch','browser-sync'))
