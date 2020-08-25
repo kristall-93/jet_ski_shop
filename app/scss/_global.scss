@@ -1,40 +1,56 @@
-html{
+html {
     box-sizing: border-box;
 }
 
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: inherit;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
+    display: inline-block;
+    outline: none;
 }
 
-ul, li{
+ul,
+li {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 
-body{
+p {
+    margin: 0;
+}
+
+body {
     color: $text;
-    font-family: 'SFProDisplay-Regular', sans-serif;
+    font-family: "SFProDisplay-Regular", sans-serif;
     font-size: 20px;
     line-height: 24px;
     font-weight: 400;
+    overflow-x: hidden;
+    min-width: 320px;
 }
 
-.container{
+.container {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
-
+.page-section{
+    margin-bottom: 50px;
+}
